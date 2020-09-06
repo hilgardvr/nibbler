@@ -1,0 +1,24 @@
+Nibbler project: A simple snake like game written in C++ using dynamically linked libraries and demostrating the use of library switching at runtime.
+
+The program is docker containerised so that it can be run in a platform agnostic way, as long as Docker is installed.
+
+To build:
+
+/**** if you are on mac to setup docker-machine run (must be preinstalled together with virtualbox) *****/
+
+$>docker-machine create --driver virtualbox nibbler-machine
+$>eval "$(docker-machine env nibbler-machine)"
+
+/**** continue below (might require sudo priviledges ****/
+
+$> chmod 755 run.sh
+$> ./run.sh
+
+You are now inside the container - to make and run:
+$>make
+$>./nibbler (size_x) (size_y)
+
+
+Usage:
+
+Arrow keys are used to control the snake, numbers 1, 2 and 3 are used to switch between libraries, which have been implemented using different colors to indicate that libraries have been switched.

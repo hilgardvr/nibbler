@@ -1,0 +1,9 @@
+FROM ubuntu
+WORKDIR /home/nibbler
+COPY . /home/nibbler
+RUN apt-get update -y
+RUN apt-get install g++ -y
+RUN apt-get install git -y 
+RUN apt-get install libncurses5-dev libncursesw5-dev -y
+RUN apt-get install make -y
+RUN apt-get install nano -y
